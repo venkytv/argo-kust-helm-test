@@ -1,0 +1,8 @@
+app:
+  appName: kust-helm-test
+  autoSync: true
+  basePath: deploy/overlays
+  repoURL: https://github.com/venkytv/argo-kust-helm-test
+  revision: HEAD
+clusters: {}
+project: default

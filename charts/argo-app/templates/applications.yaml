@@ -1,0 +1,23 @@
+{{ range $name, $cluster := .Values.clusters }}
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: {{ $.Values.app.appName }}-{{ $name }}
+  namespace: infra-argocd
+spec:
+  destination:
+    namespace: {{ $.Values.project }}
+    name: {{ $cluster.name }}
+  project: {{ $.Values.project }}
+  source:
+    path: {{ $.Values.app.basePath }}/{{ default $.Values.app.edgeEnv $cluster.overlay }}
+    repoURL: {{ $.Values.app.repoURL }}
+    targetRevision: {{ default $.Values.app.revision $cluster.revision }}
+  {{- if $.Values.app.autoSync }}
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  {{- end }}
+{{ end }}

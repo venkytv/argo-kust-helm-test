@@ -1,0 +1,16 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: example-service
+spec:
+  template:
+    spec:
+      containers:
+      - name: example-service
+        resources:
+          limits:
+            cpu: 2m
+            memory: 40Mi
+          requests:
+            cpu: 1m
+            memory: 20Mi
