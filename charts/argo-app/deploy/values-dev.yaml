@@ -8,5 +8,5 @@ app:
 clusters:
   foo:
     name: in-cluster
-    favouriteDrink: coffee
+    favouriteDrink: chocomel
 project: default
