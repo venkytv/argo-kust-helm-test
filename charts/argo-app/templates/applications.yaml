@@ -19,7 +19,7 @@ spec:
       env:
       - name: HELM_VALUES
         value: |
-          favouriteDrink: chocolate
+          favouriteDrink: {{ default "none" $cluster.favouriteDrink }}
   {{- if $.Values.app.autoSync }}
   syncPolicy:
     automated:
