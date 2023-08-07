@@ -17,9 +17,8 @@ spec:
     plugin:
       name: kustomized-helm
       env:
-      - name: HELM_VALUES
-        value: |
-          favouriteDrink: {{ default "none" $cluster.favouriteDrink }}
+      - name: HELM_ARGS
+        value: "--set favouriteDrink={{ default "none" $cluster.favouriteDrink }}"
   {{- if $.Values.app.autoSync }}
   syncPolicy:
     automated:
