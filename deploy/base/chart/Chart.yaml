@@ -1,0 +1,4 @@
+apiVersion: v1
+name: base
+description: Helm chart for base resources
+version: 0.0.1
