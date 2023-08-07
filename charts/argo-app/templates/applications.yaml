@@ -4,7 +4,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ $.Values.app.appName }}-{{ $name }}
-  namespace: infra-argocd
+  namespace: default
 spec:
   destination:
     namespace: {{ $.Values.project }}
