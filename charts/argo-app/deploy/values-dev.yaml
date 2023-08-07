@@ -6,6 +6,6 @@ app:
   repoURL: https://github.com/venkytv/argo-kust-helm-test
   revision: HEAD
 clusters:
-  in-cluster:
-    name: foo
+  foo:
+    name: in-cluster
 project: default
