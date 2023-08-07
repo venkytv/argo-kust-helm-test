@@ -4,6 +4,7 @@ metadata:
   labels:
     app: example-service
   name: example-service
+  namespace: argocd
 spec:
   replicas: 1
   selector:

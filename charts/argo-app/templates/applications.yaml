@@ -4,10 +4,10 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: {{ $.Values.app.appName }}-{{ $name }}
-  namespace: default
+  namespace: argocd
 spec:
   destination:
-    namespace: {{ $.Values.project }}
+    namespace: argocd
     name: {{ $cluster.name }}
   project: {{ $.Values.project }}
   source:
