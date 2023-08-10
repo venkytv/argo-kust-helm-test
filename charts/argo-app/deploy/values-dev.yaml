@@ -9,4 +9,5 @@ clusters:
   foo:
     name: in-cluster
     favouriteDrink: chocomel
+    favouriteFood: cake
 project: default

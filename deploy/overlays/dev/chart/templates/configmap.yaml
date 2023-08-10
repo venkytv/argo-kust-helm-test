@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: example-service-conf
 data:
-  myvalue: "Hello World"
   drink: {{ .Values.favouriteDrink }}
+  food: {{ .Values.favouriteFood }}
