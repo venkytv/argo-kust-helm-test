@@ -18,4 +18,7 @@ spec:
       containers:
       - name: example-service
         command: ['sleep', 'infinity']
+        envFrom:
+        - configMapRef:
+            name: example-service-conf
         image: alpine
