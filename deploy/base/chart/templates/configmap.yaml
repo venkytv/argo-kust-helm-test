@@ -5,3 +5,4 @@ metadata:
 data:
   drink: {{ .Values.favouriteDrink }}
   food: {{ .Values.favouriteFood }}
+  pastime: {{ default "nothing" .Values.favouritePastime }}
