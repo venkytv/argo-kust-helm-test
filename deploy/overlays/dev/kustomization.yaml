@@ -5,7 +5,6 @@ namespace: default
 
 resources:
 - ../../base
-- helm.yaml
 
 patches:
 - path: deployment.yaml
